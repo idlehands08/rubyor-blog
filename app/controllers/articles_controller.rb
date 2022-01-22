@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
     def index
         @articles = Article.all 
+        @randomQuote = QuoteRandomizer::Client.today
     end
 
     def new
